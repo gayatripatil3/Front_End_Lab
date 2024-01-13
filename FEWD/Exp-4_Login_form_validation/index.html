@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Experiment 4</title>
+</head>
+<body>
+    
+    <div class="reg_form">
+        <h1>LOGIN FORM</h1>
+    <form action="">
+        <label for="first_name" id="l_first_name">First Name</label>
+        <input type="text" id="first_name"><span id="first_name_error" style="color:red"></span><span id="first_name_error_2" style="color:red"></span>
+<br>
+        <label for="password" id="l_password">Password</label>
+        <input type="password" id="password"><span id="password_error" style="color:red"></span>
+<br>
+        <label for="email" id="l_email">Email</label>
+        <input type="email" id="email"><span id="email_error" style="color:red"></span>
+<br>
+        <label for="mob" id="l_mob">Mobile Number</label>
+        <input type="number" id="mob"><span id="mob_error" style="color:red"></span>
+<br>
+        <label for="last_name" id="l_last_name">Last Name</label>
+        <input type="text" id="last_name"><span id="last_name_error" style="color:red"></span>
+<br>
+        <label for="address" id="l_address">Address</label>
+        <textarea name="" id="address" cols="30" rows="10"></textarea><span id="address_error" style="color:red"></span>
+    <br>
+    <input type="button" value="Submit" onclick="registration()" id="submit_button">
+    </form>
+    </div>
+    <script>
+function registration(){
+    var name1=document.getElementById("first_name").value;
+    var password1=document.getElementById("password").value;
+    var email1=document.getElementById("email").value;
+    var phone=document.getElementById("mob").value;
+    var last_name=document.getElementById("last_name").value;
+    var address=document.getElementById("address").value;
+    // var text="";
+    const restrict1=/\d/;
+console.log(name1==="^[A-Za-z]+$");
+
+    if(name1.length<7){
+        var text ="*Length should be greater than 6 characters.";
+        document.getElementById("first_name_error").innerHTML=text;
+    }
+    else{
+        var text1="";
+       document.getElementById("first_name_error").innerHTML=text1;
+    }
+
+    if(restrict1.test(name1)){
+                var text="   *Name should contain only alphabets";
+document.getElementById("first_name_error_2").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("first_name_error_2").innerHTML=text;
+    }
+    
+    if(password1.length<7){
+        var text ="*Length of password should be greater than 6 characters.";
+        document.getElementById("password_error").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("password_error").innerHTML=text;
+    }
+    if(email1.length==0){
+        var text ="*Email shouldn't be empty";
+        document.getElementById("email_error").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("email_error").innerHTML=text;
+    }
+    if(phone.length!=10){
+        var text ="*Length of phone number should be 10.";
+        document.getElementById("mob_error").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("mob_error").innerHTML=text;
+    }
+
+    if(last_name.length==0){
+        var text ="*Last Name shouldn't be empty";
+        document.getElementById("last_name_error").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("last_name_error").innerHTML=text;
+    }
+    if(address.length==0){
+        var text ="*Address shouldn't be empty";
+        document.getElementById("address_error").innerHTML=text;
+    }
+    else{
+        var text="";
+        document.getElementById("address_error").innerHTML=text;
+    }
+       
+}
+
+    </script>
+</body>
+</html>

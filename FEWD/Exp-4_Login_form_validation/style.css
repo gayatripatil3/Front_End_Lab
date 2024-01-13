@@ -1,0 +1,105 @@
+.reg_form{
+    position:absolute;
+    left:330px;
+    border: 1px solid;
+    width:400px;
+    height:600px;
+    background-color: yellow;
+    
+}
+h1{
+    position: absolute;
+    left:100px;
+    
+}
+input{
+    position:absolute;
+    left:200px;
+}
+label{
+    position:absolute;
+    left:60px;
+}
+#first_name{
+    
+    top:80px;
+}
+#password{
+    top:140px;
+}
+#email{
+    top:200px;
+}
+#mob{
+    top:260px;
+}
+#last_name{
+    top:320px;
+}
+#l_first_name{
+    
+    top:80px;
+}
+#l_password{
+    top:140px;
+}
+#l_email{
+    top:200px;
+}
+#l_mob{
+    top:260px;
+}
+#l_last_name{
+    top:320px;
+}
+#l_address{
+    top:380px;
+}
+textarea{
+    position: absolute;
+    left:140px;
+    top:380px;
+}
+#submit_button{
+    position: absolute;
+    left:170px;
+    top:570px;
+    width:100px;
+    height:25px;
+    background-color: green;
+    color:rgb(255, 255, 255)
+  
+}
+span{
+    position:absolute;
+    left:200px;
+    font-size: 10px;
+    
+}
+#first_name_error{
+    top:100px;
+}
+#first_name_error_2{
+    top:115px;
+}
+#password_error{
+    top:160px;
+}
+#email_error{
+    top:220px;
+}
+#mob_error{
+    top:280px;
+}
+#last_name_error{
+    top:340px;
+}
+#address_error{
+    top:545px;
+}
+
+
+.submit_button button:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
